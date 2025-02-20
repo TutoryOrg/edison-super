@@ -1,0 +1,58 @@
+---
+import AboutMe from "../components/AboutMe.astro";
+import DownloadCV from "../components/DownloadCV.astro";
+import Education from "../components/Education.astro";
+import Experience from "../components/Experience.astro";
+import Profile from "../components/Profile.astro";
+import Projects from "../components/Projects.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Technologies from "../components/Technologies.astro";
+import Email from "../icons/Email.astro";
+import Github from "../icons/Github.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Portfolio saav - React Native Developer"
+  description="React Native/Expo Developer"
+>
+  <main class="mt-16">
+    <div
+      class="lg:max-w-5xl mx-auto grid grid-col-1 lg:grid-cols-4 lg:grid-rows-6 gap-3"
+    >
+      <div class="lg:row-span-2 lg:row-start-1"><Profile /></div>
+      <div class="lg:col-span-2 lg:row-span-2"><Education /></div>
+      <div class="lg:row-span-4 lg:col-start-4"><AboutMe /></div>
+      <div class="lg:col-span-2 lg:row-span-2">
+        <Technologies />
+      </div>
+      <div class="lg:row-span-4 lg:row-start-3"><Projects /></div>
+      <div class="lg:col-span-4 lg:row-span-5 lg:col-start-2 lg:row-start-5">
+        <Experience />
+      </div>
+    </div>
+
+    <div
+      class="absolute mb-[40px] mt-[40px] m-0 bottom-100 left-1/2 transform -translate-x-1/2 p-4 w-[330px] h-16 relative bg-black/20
+      backdrop-blur-lg rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-4 transition-transform duration-300
+      text-white flex flex-row items-center justify-between border border-transparent hover:border-gray-400"
+    >
+      <SocialPill href="https://github.com/salcocer" title="Github">
+        <Github class="w-10 h-10" />
+      </SocialPill>
+      <SocialPill
+        href="https://www.linkedin.com/in/edison-a-218939202/"
+        title="Linkedin"
+      >
+        <Linkedin class="w-10 h-10" />
+      </SocialPill>
+      <SocialPill href="mailto:csaavpopos@gmail.com" title="Email me">
+        <Email class="w-10 h-10" />
+      </SocialPill>
+      <SocialPill>
+        <DownloadCV class="w-10 h-10" fileUrl="CV_Edison.pdf" />
+      </SocialPill>
+    </div>
+  </main>
+</Layout>
